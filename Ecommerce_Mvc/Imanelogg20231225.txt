@@ -1,0 +1,71 @@
+2023-12-25 23:58:28.886 +01:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-25 23:58:29.647 +01:00 [INF] Now listening on: https://localhost:7084
+2023-12-25 23:58:29.661 +01:00 [INF] Now listening on: http://localhost:5139
+2023-12-25 23:58:29.669 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-25 23:58:29.671 +01:00 [INF] Hosting environment: Development
+2023-12-25 23:58:29.672 +01:00 [INF] Content root path: C:\Users\hp\Desktop\ILISI\ILISI3\.NET\.Net6_MVC-App-master\Ecommerce_Mvc\
+2023-12-25 23:58:31.154 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/ - -
+2023-12-25 23:58:31.882 +01:00 [INF] Executing endpoint 'Ecommerce_Mvc.Controllers.HomeController.Index (Ecommerce_Mvc)'
+2023-12-25 23:58:31.945 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Ecommerce_Mvc.Controllers.HomeController (Ecommerce_Mvc).
+2023-12-25 23:58:31.969 +01:00 [INF] Executing ViewResult, running view Index.
+2023-12-25 23:58:32.447 +01:00 [INF] Executed ViewResult - view Index executed in 479.5617ms.
+2023-12-25 23:58:32.471 +01:00 [INF] Executed action Ecommerce_Mvc.Controllers.HomeController.Index (Ecommerce_Mvc) in 522.1208ms
+2023-12-25 23:58:32.477 +01:00 [INF] Executed endpoint 'Ecommerce_Mvc.Controllers.HomeController.Index (Ecommerce_Mvc)'
+2023-12-25 23:58:32.717 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 23:58:32.719 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - -
+2023-12-25 23:58:32.720 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/ - - - 200 - text/html;+charset=utf-8 1554.3611ms
+2023-12-25 23:58:32.753 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12321 application/javascript;+charset=utf-8 35.8154ms
+2023-12-25 23:58:32.879 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 159.8291ms
+2023-12-25 23:58:35.116 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/Product - -
+2023-12-25 23:58:35.148 +01:00 [INF] Executing endpoint 'Ecommerce_Mvc.Controllers.ProductController.Index (Ecommerce_Mvc)'
+2023-12-25 23:58:35.204 +01:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String) on controller Ecommerce_Mvc.Controllers.ProductController (Ecommerce_Mvc).
+2023-12-25 23:58:37.396 +01:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.0' with options: None
+2023-12-25 23:58:38.799 +01:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Name", "p"."Description", CAST("p"."Price" AS TEXT) AS "Price", "p"."Color", "p"."Image", "p"."CategoryId", "c"."CategoryName", 0 AS "Quantity"
+FROM "Products" AS "p"
+INNER JOIN "Categories" AS "c" ON "p"."CategoryId" = "c"."CategoryId"
+2023-12-25 23:58:39.012 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."CategoryId", "c"."CategoryName"
+FROM "Categories" AS "c"
+2023-12-25 23:58:39.715 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."CategoryId", "p"."Color", "p"."Description", "p"."Image", "p"."Name", "p"."Price", "c"."CategoryId", "c"."CategoryName"
+FROM "Products" AS "p"
+INNER JOIN "Categories" AS "c" ON "p"."CategoryId" = "c"."CategoryId"
+WHERE "p"."Id" IN (3, 0, 10)
+2023-12-25 23:58:39.889 +01:00 [INF] Accessing expired session, Key:1d0bb0ca-0790-22f8-b283-1864322358c0
+2023-12-25 23:58:40.449 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[@__normalizedEmail_0='?' (Size = 14)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."FirstName", "a"."LastName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2023-12-25 23:58:40.577 +01:00 [INF] [32m**********Product list retrieved successfully.**********[0m
+2023-12-25 23:58:40.581 +01:00 [INF] Executing ViewResult, running view Index.
+2023-12-25 23:58:40.831 +01:00 [INF] Executed ViewResult - view Index executed in 251.9783ms.
+2023-12-25 23:58:40.834 +01:00 [INF] Executed action Ecommerce_Mvc.Controllers.ProductController.Index (Ecommerce_Mvc) in 5623.388ms
+2023-12-25 23:58:40.837 +01:00 [INF] Executed endpoint 'Ecommerce_Mvc.Controllers.ProductController.Index (Ecommerce_Mvc)'
+2023-12-25 23:58:40.851 +01:00 [INF] Session started; Key:1d0bb0ca-0790-22f8-b283-1864322358c0, Id:3831eff9-e9ee-0e29-a611-950bb9e4713d
+2023-12-25 23:58:40.926 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/animate/animate.min.css - -
+2023-12-25 23:58:40.929 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/owlcarousel/assets/owl.carousel.min.css - -
+2023-12-25 23:58:40.929 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css - -
+2023-12-25 23:58:40.930 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/Product - - - 200 - text/html;+charset=utf-8 5813.8627ms
+2023-12-25 23:58:40.971 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/animate/animate.min.css - - - 404 0 - 45.0569ms
+2023-12-25 23:58:40.971 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/owlcarousel/assets/owl.carousel.min.css - - - 404 0 - 41.4765ms
+2023-12-25 23:58:40.971 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css - - - 404 0 - 41.3645ms
+2023-12-25 23:58:40.983 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/wow/wow.min.js - -
+2023-12-25 23:58:40.983 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/easing/easing.min.js - -
+2023-12-25 23:58:40.982 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 23:58:40.984 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/waypoints/waypoints.min.js - -
+2023-12-25 23:58:40.986 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/wow/wow.min.js - - - 404 0 - 3.0032ms
+2023-12-25 23:58:40.987 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/easing/easing.min.js - - - 404 0 - 4.2050ms
+2023-12-25 23:58:40.989 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/_framework/aspnetcore-browser-refresh.js - - - 200 12321 application/javascript;+charset=utf-8 6.6327ms
+2023-12-25 23:58:40.992 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/waypoints/waypoints.min.js - - - 404 0 - 7.8593ms
+2023-12-25 23:58:40.994 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/tempusdominus/js/moment.min.js - -
+2023-12-25 23:58:40.993 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/owlcarousel/owl.carousel.min.js - -
+2023-12-25 23:58:40.998 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/tempusdominus/js/moment-timezone.min.js - -
+2023-12-25 23:58:41.000 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js - -
+2023-12-25 23:58:41.003 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/tempusdominus/js/moment.min.js - - - 404 0 - 9.5882ms
+2023-12-25 23:58:41.008 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/owlcarousel/owl.carousel.min.js - - - 404 0 - 15.7904ms
+2023-12-25 23:58:41.015 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js - - - 404 0 - 14.7785ms
+2023-12-25 23:58:41.012 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/lib/tempusdominus/js/moment-timezone.min.js - - - 404 0 - 13.9679ms
+2023-12-25 23:58:41.017 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7084/_vs/browserLink - -
+2023-12-25 23:58:41.061 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7084/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.1178ms
